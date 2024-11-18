@@ -18,8 +18,17 @@ def displayMenu():
     print("4. Division")
 
 def main(): #main program
+    allFeatures = ["Addition", "Subtraction", "Multiplication", "Division"]
     print("I shall give you answers for math")
-    displayMenu()
+    #displayMenu()
+    print("Here are the features in the application")
+    #start loop
+    # for currentFeature in allFeatures:
+    #     print(currentFeature)
+    #advance loop
+    for currentFeature in range(len(allFeatures)):
+        print(allFeatures[currentFeature])
+    print(allFeatures[2])
     userChoice = int(input("Pick one. Just type the number (or else...): "))
     userFirstNum = int(input("Give me a number: "))
     userSecondNum = int(input("Give me another number: "))
