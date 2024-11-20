@@ -1,17 +1,17 @@
-def addNum(firstNum, secondNum):
+def addNum(firstNum, secondNum): #adds the two inputs
     sum = firstNum + secondNum
     print("The sum of your numbers is" , sum)
-def subtractNum(firstNum, secondNum):
+def subtractNum(firstNum, secondNum): #subtracts two inputs
     difference = firstNum - secondNum
-    print("The difference of your numbers is" , difference)
-def multiplyNum(firstNum, secondNum):
+    print("The difference of your numbers is" , difference) 
+def multiplyNum(firstNum, secondNum):#multiplies two inputs
     product = firstNum * secondNum
     print("The product of your numbers is" , product)
-def divideNum(firstNum, secondNum):
+def divideNum(firstNum, secondNum): #divides new inputs
     quotient = firstNum / secondNum
     print("The quotient of your numbers is" , quotient)
 
-def displayMenu():
+def displayMenu(): #displays the menu
     print("1. Additon")
     print("2. Subtraction")
     print("3. Multiplication")
@@ -20,12 +20,7 @@ def displayMenu():
 def main(): #main program
     allFeatures = ["Addition", "Subtraction", "Multiplication", "Division"]
     print("I shall give you answers for math")
-    #displayMenu()
     print("Here are the features in the application")
-    #start loop
-    # for currentFeature in allFeatures:
-    #     print(currentFeature)
-    #advance loop
     for currentFeature in range(len(allFeatures)):
         print(allFeatures[currentFeature])
     print(allFeatures[2])
@@ -40,4 +35,4 @@ def main(): #main program
         multiplyNum(userFirstNum, userSecondNum)
     if userChoice == 4:
         divideNum(userFirstNum, userSecondNum)
-main()
+main() #runs the program
