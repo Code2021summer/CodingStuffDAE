@@ -1,6 +1,7 @@
 header {
     color: #00ffae;
     text-align: center;
+    font-family: "Kalnia Glaze", Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
     background-color: black;
@@ -10,4 +11,5 @@ body {
 nav {
     background-color: #254827;
     padding: 20px 10px 10px 20px;
+    font-family: "press start 2p", Verdana, Tahoma, sans-serif;
 }
