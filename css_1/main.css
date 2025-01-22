@@ -13,3 +13,34 @@ nav {
     padding: 20px 10px 10px 20px;
     font-family: "press start 2p", Verdana, Tahoma, sans-serif;
 }
+figcaption {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    color: rgb(0, 255, 225);
+}
+@keyframes fadeIn {
+    from{
+        color:#000000;
+    }
+    to {
+        color:rgb(255, 255, 255);
+    }
+}
+a:hover {
+    color:rgb(217, 161, 247);
+}
+a:active {
+    color: rgb(255, 255, 255);
+}
+/*The footer fades in and out depending if someone is hovering over it*/
+footer {
+    color:rgb(0, 0, 0);
+    transition: color 1s;
+}
+footer:hover {
+    animation-name: fadeIn;
+    color: white;
+    animation-duration: 1s;
+}
