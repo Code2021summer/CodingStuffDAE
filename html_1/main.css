@@ -1,20 +1,59 @@
-.ask_suggestion {
-    color: green;
-    font-family: cursive;
-}
-h1 {
-    color: green;
-    font-family: 'fancyTest', 'Courier New', Courier, monospace;
+header {
+    color: #00ffae;
+    text-align: center;
+    font-family: "Kalnia Glaze", Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-    background-color: aqua;
+    background-color: black;
+    color: whitesmoke;
+    margin: 50px 70px 0px 50px;
+    font-size:115%; 
+}
+nav {
+    background-color: #254827;
+    padding: 20px 10px 10px 20px;
+    font-family: "press start 2p", Verdana, Tahoma, sans-serif;
+}
+figcaption {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.kalnia-glaze-fancyTest {  /*the fancy font*/
-    font-family: "Kalnia Glaze", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
+a {
+    color: rgb(0, 255, 225);
+}
+@keyframes fadeIn {
+    from{
+        color:#000000;
+    }
+    to {
+        color:rgb(255, 255, 255);
+    }
+}
+a:hover {
+    color:rgb(217, 161, 247);
+}
+a:active {
+    color: rgb(255, 255, 255);
+}
+/*The footer fades in and out depending if someone is hovering over it*/
+footer {
+    color:rgb(0, 0, 0);
+    transition: color 1s;
+}
+footer:hover {
+    animation-name: fadeIn;
+    color: white;
+    animation-duration: 1s;
+}
+
+#edge {
+    position: fixed;
+    text-align: center;
+    width: 60px;
+    bottom:0;
+    margin-bottom: 20px;
+    right:0;
+    margin-right: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+}

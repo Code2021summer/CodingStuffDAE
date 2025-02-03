@@ -1,0 +1,20 @@
+.ask_suggestion {
+    color: green;
+    font-family: cursive;
+}
+h1 {
+    color: green;
+    font-family: 'fancyTest', 'Courier New', Courier, monospace;
+}
+body {
+    background-color: aqua;
+}
+
+.kalnia-glaze-fancyTest {  /*the fancy font*/
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
