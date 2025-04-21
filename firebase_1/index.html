@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <head>
+        <title>Mildly Fascinating</title>
+        <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Learn Something New!</h1>
+            <p>Welcome to Mildly Fascinating</p>
+            <img src="img/capybara.png" alt="Picture of a Happy Capybara drinking boba" width="300"/>
+        </header>
+        <nav> 
+            <h2>Travel Faster</h2>
+            <ul>
+                <li>
+                    <a href="other.html">Nothing to see here</a>
+                </li>
+                <li>
+                    <a href="https://shattereddisk.github.io/rickroll/rickroll.mp4">Click at your own risk</a>
+                </li>
+                <li>
+                    <a href="tesseract.html">Idk what else to write</a>
+                </li>
+                <li>
+                    <a href="plankton.html">Okay there's more</a>
+                </li>
+                <li>
+                    <a href="java.html">This might be fun</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h2>What is Mildly Fascinating?</h2>
+                <p>It's a little place for me to share anything random that people might find fascinating. I'll post in-depth descriptions and explanations of pretty much anything that I think is worth learning a little about, whether it's the many worlds interpretaton of quantum mechanics or why oranges are called oranges. I really hope there's something here that you find mildly fascinating.</p>
+            </article>
+            <div class="ask_suggestion">
+                <p>Hey, so the world's amazing and possible infinite, and there's no way for me to find every mildly fascinating thing about it. If you have any ideas for a topic I should write about, I'd love to hear them.</p>
+                <p>Tell me your great mildly fascinating idea here: <input type="text" id="idea" name="user_idea"></p>
+                
+                <button type="button" onclick="alert('Thanks :&#41')">Submit</button>
+                
+            </div>
+        </main>
+        <footer>
+            <p>I hope you're having a good day :&#41</p>
+        </footer>
+        <script src="index.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyCXw4b0lIG_XH6GKE96EYHuz0LLPxn2O5U",
+              authDomain: "mildly-fascinating.firebaseapp.com",
+              projectId: "mildly-fascinating",
+              storageBucket: "mildly-fascinating.firebasestorage.app",
+              messagingSenderId: "487231327584",
+              appId: "1:487231327584:web:cda30126083266769e6205"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+          </script>
+    </body>
+</html>

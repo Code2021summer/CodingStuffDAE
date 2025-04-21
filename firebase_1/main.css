@@ -1,0 +1,87 @@
+header {
+    color: #00ffae;
+    text-align: center;
+    font-family: "Kalnia Glaze", Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-color: black;
+    color: whitesmoke;
+    margin: 50px 70px 0px 50px;
+    font-size:115%; 
+}
+nav {
+    background-color: #254827;
+    padding: 20px 10px 10px 20px;
+    font-family: "press start 2p", Verdana, Tahoma, sans-serif;
+}
+figcaption {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a {
+    color: rgb(0, 255, 225);
+}
+@keyframes fadeIn {
+    from{
+        color:#000000;
+    }
+    to {
+        color:rgb(255, 255, 255);
+    }
+}
+a:hover {
+    color:rgb(217, 161, 247);
+}
+a:active {
+    color: rgb(255, 255, 255);
+}
+/*The footer fades in and out depending if someone is hovering over it*/
+footer {
+    color:rgb(0, 0, 0);
+    transition: color 1s;
+}
+footer:hover {
+    animation-name: fadeIn;
+    color: white;
+    animation-duration: 1s;
+}
+
+#edge {
+    position: fixed;
+    text-align: center;
+    width: 60px;
+    bottom:0;
+    margin-bottom: 20px;
+    right:0;
+    margin-right: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+}
+ul {
+    line-height: 30px;
+}
+#clicker:hover {
+    width: 80px;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+#tank {
+    background-color: aqua;
+    border-color: darkcyan;
+    border-radius: 300px;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    /*margin: auto;*/
+} 
