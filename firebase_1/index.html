@@ -51,33 +51,18 @@
             <button onclick="signUp()">SIGN UP TO MY WEBSITE</button>
 
             <h2>Log In Test</h2>
-            <p>Email : </p> <input type="email" id="login-email">
-            <p>Password : </p><input type="password" id="login-password">
+            <p>Email : </p> <input type="email" id="signin-email">
+            <p>Password : </p><input type="password" id="signin-password">
             <button onclick="logIn()">LOG IN TO THIS WEBSITE</button>
 
-            <button onclick="longOut()">LOG OUT OF THIS WEBSITE</button>
+            <button onclick="logOut()">LOG OUT OF THIS WEBSITE</button>
 
             <p id="user-info"></p>
         </div>
         <footer>
             <p>I hope you're having a good day :&#41</p>
         </footer>
-        <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-
-        <script src="index.js"></script>
-        <script>
-            const firebaseConfig = {
-                apiKey: "AIzaSyCXw4b0lIG_XH6GKE96EYHuz0LLPxn2O5U",
-                authDomain: "mildly-fascinating.firebaseapp.com",
-                projectId: "mildly-fascinating",
-                storageBucket: "mildly-fascinating.firebasestorage.app",
-                messagingSenderId: "487231327584",
-                appId: "1:487231327584:web:cda30126083266769e6205"
-            };
-            firebase.initializeApp(firebaseConfig);
-            console.log(firebase);
-        </script>
+        <script src="index.js" type="module"></script>
 
     </body>
 </html>
