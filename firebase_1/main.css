@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Kalnia+Glaze:wght@100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 header {
     color: #00ffae;
     text-align: center;
@@ -8,6 +11,7 @@ body {
     color: whitesmoke;
     margin: 50px 70px 0px 50px;
     font-size:115%; 
+    font-family: "Cabin", sans-serif;
 }
 nav {
     background-color: #254827;
