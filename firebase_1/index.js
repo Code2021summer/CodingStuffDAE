@@ -7,6 +7,12 @@ import {
     onAuthStateChanged,
     signOut
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import { 
+    getFirestore,
+    doc,
+    setDoc,
+    getDoc 
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,6 +29,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 //chat
 // Sign up function
@@ -73,5 +80,23 @@ window.signUp = function () {
       userInfo.textContent = `Logged in as: ${user.email}`;
     } else {
       userInfo.textContent = "You're not signed in :(";
+    }
+  });
+
+  onAuthStateChanged(auth, async (user) =>{
+    if (user) {
+        const firstName = "Hey";
+        const age = 30;
+        try {
+            await setDoc(doc(db, "users", user.uid), {
+                firstName: firstName,
+                age: age
+            });
+            console.log("It Worked!!");
+        } catch (e) {
+            console.error("At least the error message worked. Here it is: ", e);
+        }
+    } else {
+        console.log("No one was signed in...")
     }
   });
