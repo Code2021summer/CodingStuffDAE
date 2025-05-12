@@ -43,13 +43,14 @@
             <a href="index.html">Bored?</a>
         </div>
     </main>
-    <footer>
-        <div class="card"><!--This is a BootStrap Component-->
-            <div class="card-body">
-              Doesn't this look nice?
-            </div>
-          </div>
-          <a href="index.html">Okay you can leave now</a>
-    </footer>
+    <hr>
+    <div id="commentSection">
+        <h3>Drop a comment, question, or whatever else here : </h3>
+        <textarea id="commentText" placeholder="This was mildly fascinating"></textarea> <br>
+        <input type="file" id="mediaUpload" accept="image/*,video/*"> <br>
+        <button id="submitComment">Post Comment</button>
+        <div id="comments"></div>
+    </div>
+    <script src="index.js" type="module"></script>
 </body>
 </html>

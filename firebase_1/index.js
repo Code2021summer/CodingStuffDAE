@@ -1,4 +1,4 @@
-// Import the functions you need from the SDKs you need
+// IMPORT STUFF
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
 import {
     getAuth,
@@ -13,6 +13,13 @@ import {
     setDoc,
     getDoc 
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-storage.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,6 +37,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 
 //chat
 // Sign up function
@@ -100,3 +108,54 @@ window.signUp = function () {
         console.log("No one was signed in...")
     }
   });
+
+ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+document.getElementById("submitComment").addEventListener("click", handleCommentSubmit);
+
+async function handleCommentSubmit() {
+  const commentText = document.getElementById("commentText").value;
+  const fileInput = document.getElementById("mediaUpload");
+  const file = fileInput.files[0];
+
+  if (!commentText && !file) {
+    alert("You didn't add a comment :(");
+    return;
+  }
+
+  let mediaUrl = null;
+
+  if (file) {
+    const storageRef = ref(storage, `comments/${Date.now()}_${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);  // Defining uploadTask
+
+    try {
+      const snapshot = await uploadTask;
+      mediaUrl = await getDownloadURL(snapshot.ref);
+    } catch (error) {
+      console.error("Upload failed:", error);
+      alert("Failed to upload media.");
+      return;
+    }
+  }
+
+  try {
+    const commentData = {
+      text: commentText,
+      mediaUrl: mediaUrl,
+      timestamp: new Date(),
+    };
+
+    await addDoc(collection(db, "comments"), commentData);
+    console.log("Comment added to Firestore yayay");
+
+    loadComments(); // This will refresh the list of comments
+
+    // Clear the form fields
+    document.getElementById("commentText").value = "";
+    document.getElementById("mediaUpload").value = "";
+  } catch (error) {
+    console.error("Error saving to Firestore:", error);
+    alert("Failed to post comment.");
+  }
+}
