@@ -13,11 +13,34 @@ body {
     font-size:115%; 
     font-family: "Cabin", sans-serif;
 }
-nav {
+/*nav {
     background-color: #254827;
     padding: 20px 10px 10px 20px;
     font-family: "press start 2p", Verdana, Tahoma, sans-serif;
+}*/
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
+
+.item {
+    text-align: center;
+    font-size: 90%;
+    background-color: #254827;
+    border-radius: 25px;
+    
+}
+.item img {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+.item p {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
 figcaption {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
