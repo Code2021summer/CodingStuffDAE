@@ -5,21 +5,31 @@
     <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <h2>Sign Up Test</h2>
-        <p>Don't put any actual info please</p>
-        <input type="email" id="signup-email" placeholder="example@email.com">
-        <input type="password" id="signup-password" placeholder="passw0rd">
-        <button onclick="signUp()">SIGN UP TO MY WEBSITE</button>
-    
-        <h2>Log In Test</h2>
-        <p>Email : </p> <input type="email" id="signin-email">
-        <p>Password : </p><input type="password" id="signin-password">
-        <button onclick="logIn()">LOG IN TO THIS WEBSITE</button>
-    
-        <button onclick="logOut()">LOG OUT OF THIS WEBSITE</button>
-    
-        <p id="user-info"></p>
+    <header>
+        <h1>Account</h1>
+    </header>
+    <div class="container">
+        <div class="accountItem">
+            <h2>Sign Up Here</h2>
+            <p>Note: Don't put any actual info for the moment. However, you can used a fake email to test it out.</p>
+            <p>Email : <input type="email" id="signup-email" placeholder="example@email.com"></p>
+            <p>Password: <input type="password" id="signup-password" placeholder="passw0rd"></p>
+            <button onclick="signUp()">SIGN UP</button>
+        </div>
+        <div class="accountItem">
+            <h2>Log In Here</h2>
+            <p>Note: This will only work if you created an account on the left. If you don't want to do that use this example account I made:</p>
+            <p>Email: <em>hi@example.com</em></p>
+            <p>Password: <em>password</em></p>
+            <p>Email : <input type="email" id="signin-email"></p>
+            <p>Password : <input type="password" id="signin-password"></p>
+            <button onclick="logIn()">LOG IN TO THIS WEBSITE</button>
+        </div>
+        <div id="loginStatus" class="accountItem">
+            <h3>Login Status</h3>
+            <p id="user-info"></p>
+            <button onclick="logOut()">LOG OUT</button>
+        </div>
     </div>
     <div id="edge">
         <img src="img/rickroll.gif" alt="Never Gonna Give You Up" width="50"/>
