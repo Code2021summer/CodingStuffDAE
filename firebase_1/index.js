@@ -1,3 +1,10 @@
+
+
+
+
+
+
+//ALL FIREBASE BELOW
 // IMPORT STUFF
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
 import {
