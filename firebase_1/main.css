@@ -41,7 +41,6 @@ body {
     border-radius: 20px;
     padding: 5%;
 }
-
 .item {
     text-align: center;
     font-size: 90%;
@@ -113,7 +112,16 @@ footer:hover {
     color: white;
     animation-duration: 1s;
 }
-
+.table {
+    background-color: #254827;
+    color: aliceblue;
+}
+#gameFish {
+    animation-name: fishTank;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 #edge {
     position: fixed;
     text-align: center;
@@ -131,6 +139,13 @@ ul {
 #clicker:hover {
     width: 80px;
 }
+@keyframes fishTank {
+    from {
+        transform: translateX(0) rotateY(180deg);
+    }
+    to {transform: translateX(calc(100vw - 400px)) rotateY(0deg);
+    }
+}
 
 .cell {
     width: 75px;
@@ -146,6 +161,7 @@ ul {
     background-color: aqua;
     border-color: darkcyan;
     border-radius: 300px;
+    position: relative;
 }
 
 #cellContainer {

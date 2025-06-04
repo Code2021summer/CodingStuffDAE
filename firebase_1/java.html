@@ -11,38 +11,43 @@
             <img src="img/rickroll.gif" alt="Never Gonna Give You Up" width="50"/>
             <a href="index.html">Bored?</a>
         </div>
+        <header>
+            <h1>Games</h1>
+        </header>
         <main>
-            <div>
-                <h2>Leaf Clicker</h2>
-                <img src="img/goodleaf.png" alt="Happy leaf" width="70px" id="clicker"/> <!--You grow a tree-->
-                <br>
-                <p id="clickCount"></p>
-            </div>
             <!-- <div>
                 <h2>Stage 1</h2>
                 <p id="narrative">You're lost. What do you do?</p>
                 <input id="eventNext">
             </div> -->
             <div id="tank">
-                <img src="img/fish.gif" alt="FISH" width="300px">
+                <img id="gameFish" src="img/fish.gif" alt="FISH" width="300px">
             </div>
-            <div id="learn">
-                <h2>Play Tic Tac Toe!</h2>
-                <div id="cellContainer">
-                    <div cellIndex="0" class="cell"></div>
-                    <div cellIndex="1" class="cell"></div>
-                    <div cellIndex="2" class="cell"></div>
-                    <div cellIndex="3" class="cell"></div>
-                    <div cellIndex="4" class="cell"></div>
-                    <div cellIndex="5" class="cell"></div>
-                    <div cellIndex="6" class="cell"></div>
-                    <div cellIndex="7" class="cell"></div>
-                    <div cellIndex="8" class="cell"></div>
+            <div class="container">
+                <div id="learn">
+                    <h2>Play Tic Tac Toe!</h2>
+                    <div id="cellContainer">
+                        <div cellIndex="0" class="cell"></div>
+                        <div cellIndex="1" class="cell"></div>
+                        <div cellIndex="2" class="cell"></div>
+                        <div cellIndex="3" class="cell"></div>
+                        <div cellIndex="4" class="cell"></div>
+                        <div cellIndex="5" class="cell"></div>
+                        <div cellIndex="6" class="cell"></div>
+                        <div cellIndex="7" class="cell"></div>
+                        <div cellIndex="8" class="cell"></div>
+                    </div>
+                    <p id="statusText"></p>
+                    <button id="restartBtn">Restart</button>
                 </div>
-                <p id="statusText"></p>
-                <button id="restartBtn">Restart</button>
+                <div>
+                    <h2>Leaf Clicker</h2>
+                    <img src="img/goodleaf.png" alt="Happy leaf" width="70px" id="clicker"/> <!--You grow a tree-->
+                    <br>
+                    <p id="clickCount"></p>
+                </div>
             </div>
-            <div id=""></div>
+            <!-- <div id=""></div> -->
             <!-- <div id="connectFour">
                 <h2>LET'S PLAY CONNECT 4</h2>
                 <div id="circleContainer">
@@ -60,6 +65,11 @@
                 <button id="againBtn">Restart</button>
             </div> -->
         </main>
+        <footer>
+            <p>
+                Hi there! 
+            </p>
+        </footer>
         <div id="edge">
             <img src="img/rickroll.gif" alt="Never Gonna Give You Up" width="50"/>
             <a href="index.html">Bored?</a>
